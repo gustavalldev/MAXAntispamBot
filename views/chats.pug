@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title Список чатов
+  body
+    h1 Список чатов
+    table(border="1")
+      tr
+        th ID
+        th Название
+        th Включён
+      each chat in chats
+        tr
+          td= chat.chat_id
+          td= chat.title || 'Без названия'
+          td= chat.enabled ? '✅ Да' : '❌ Нет'
